@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34031.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunc-QQRCodeGenerator", "AzureFunc-QQRCodeGenerator.csproj", "{BC98F969-0131-4A68-ADF8-64BA5A6BB05D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFunc-QQRCodeGenerator", "AzureFunc-QQRCodeGenerator.csproj", "{B0D48E07-4D93-49AA-95AD-AD84E49F402C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BC98F969-0131-4A68-ADF8-64BA5A6BB05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC98F969-0131-4A68-ADF8-64BA5A6BB05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC98F969-0131-4A68-ADF8-64BA5A6BB05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC98F969-0131-4A68-ADF8-64BA5A6BB05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D48E07-4D93-49AA-95AD-AD84E49F402C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D48E07-4D93-49AA-95AD-AD84E49F402C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D48E07-4D93-49AA-95AD-AD84E49F402C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D48E07-4D93-49AA-95AD-AD84E49F402C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
