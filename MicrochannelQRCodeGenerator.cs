@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -22,22 +21,20 @@ namespace AzureFunc_QQRCodeGenerator
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
-            ReqData = ReqData ?? data?.url;
+            ReqData ??= data?.url;
             if (string.IsNullOrEmpty(ReqData))
             {
                 return new BadRequestResult();
             }
 
-            var generator = ReqData;
-            var payload = generator.ToString();
+            string generator = ReqData;
+            string payload = generator.ToString();
 
-            using (var qrGenerator = new QRCodeGenerator())
-            {
-                var qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
-                var qrCode = new PngByteQRCode(qrCodeData);
-                var qrCodeAsPng = qrCode.GetGraphic(20);
-                return new FileContentResult(qrCodeAsPng, "image/png");
-            }
+            using var qrGenerator = new QRCodeGenerator();
+            var qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
+            var qrCode = new PngByteQRCode(qrCodeData);
+            var qrCodeAsPng = qrCode.GetGraphic(20);
+            return new FileContentResult(qrCodeAsPng, "image/png");
         }
     }
 }
